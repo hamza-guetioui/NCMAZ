@@ -16293,8 +16293,15 @@ export type TaxonomyToTermNodeConnectionPageInfo = PageInfo & TermNodeConnection
 };
 
 /** The template assigned to the node */
-export type Template_PageNoTitle = ContentTemplate & {
-  __typename?: 'Template_PageNoTitle';
+export type Template_Blank = ContentTemplate & {
+  __typename?: 'Template_Blank';
+  /** The name of the template */
+  templateName?: Maybe<Scalars['String']['output']>;
+};
+
+/** The template assigned to the node */
+export type Template_BlogAlternative = ContentTemplate & {
+  __typename?: 'Template_BlogAlternative';
   /** The name of the template */
   templateName?: Maybe<Scalars['String']['output']>;
 };

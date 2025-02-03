@@ -13,6 +13,7 @@ import { Toaster } from 'react-hot-toast'
 import NextNProgress from 'nextjs-progressbar'
 import themeJson from '@/../theme.json'
 import { GoogleAnalytics } from 'nextjs-google-analytics'
+import { Analytics } from "@vercel/analytics/react"
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<GoogleAnalytics trackPageViews />
+			<Analytics/>
 
 			<FaustProvider pageProps={pageProps}>
 				<WordPressBlocksProvider
